@@ -35,6 +35,12 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- For Spring Boot Actuator -->
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!-- For tests -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
