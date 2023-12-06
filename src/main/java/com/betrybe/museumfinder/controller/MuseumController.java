@@ -43,6 +43,14 @@ public class MuseumController {
         .body(ModelDtoConverter.modelToDto(createdMuseum));
   }
 
+  /**
+   * Gets closest museum.
+   *
+   * @param lat       the lat
+   * @param lng       the lng
+   * @param maxDistKm the max dist km
+   * @return the closest museum
+   */
   @GetMapping("/closest")
   public ResponseEntity<MuseumDto> getClosestMuseum(
       @RequestParam double lat,
