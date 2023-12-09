@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -61,5 +62,17 @@ public class MuseumController {
     Museum closestMuseum = service.getClosestMuseum(coordinate, maxDistKm);
     return ResponseEntity
         .ok(ModelDtoConverter.modelToDto(closestMuseum));
+  }
+
+  /**
+   * Gets museum.
+   *
+   * @param id the id
+   * @return the museum
+   */
+  @GetMapping("/{id}")
+  public ResponseEntity<MuseumDto> getMuseum(@PathVariable long id) {
+    Museum museum = service.getMuseum(id);
+    return ResponseEntity.ok(ModelDtoConverter.modelToDto(museum));
   }
 }
