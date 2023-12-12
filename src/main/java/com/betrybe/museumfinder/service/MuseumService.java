@@ -47,10 +47,13 @@ public class MuseumService implements MuseumServiceInterface {
 
   @Override
   public Museum getMuseum(Long id) {
-    Optional<Museum> museumOptional = database.getMuseum(id);
-    if (museumOptional.isEmpty()) {
-      return null;
-    }
-    return museumOptional.get();
+    //    Optional<Museum> museumOptional = database.getMuseum(id);
+    //    if (museumOptional.isEmpty()) {
+    //      throw new MuseumNotFoundException();
+    //    }
+    //    return museumOptional.get();
+
+    return database.getMuseum(id)
+        .orElseThrow(MuseumNotFoundException::new);
   }
 }
