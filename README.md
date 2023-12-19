@@ -1,5 +1,5 @@
 # 📍🏛️ Localizador de Museus
-Neste projeto foi desenvolvido uma API em Java cuja principal funcionalidade é facilitar a busca por museus baseada em sua localização. Os dados foram retirados desta [série histórica]. Essa aplicação utilizou o Spring Web, camadas de controle e serviço, injeção de dependências, exceções customizadas, gerenciadores de erros e testes unitários para cobertura de código.
+Neste projeto foi desenvolvido uma API em Java cuja principal funcionalidade é facilitar a busca por museus baseada em sua localização. Os dados foram retirados desta [série histórica](http://dados.cultura.gov.br/dataset/series-historicas-cadastro-nacional-de-museus). Essa aplicação utilizou o Spring Web, camadas de controle e serviço, injeção de dependências, exceções customizadas, gerenciadores de erros e testes unitários para cobertura de código.
 
 ## ⚙️ Instalação das dependências
 Para instalar as dependências do projeto, execute o comando `mvn install`. Isso fará o download das dependências configuradas no `pom.xml`, além de baixar as dependências indiretas.
